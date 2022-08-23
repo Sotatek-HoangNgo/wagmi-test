@@ -272,6 +272,8 @@ export class InjectedConnector extends Connector<
 
   protected onChainChanged = (chainId: number | string) => {
     const id = normalizeChainId(chainId)
+    console.log("Switch to chain: ", chainId);
+
     const unsupported = this.isChainUnsupported(id)
     this.emit('change', { chain: { id, unsupported } })
   }
