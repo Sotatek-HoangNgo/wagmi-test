@@ -16,7 +16,7 @@
     "lint:format": "prettier --write",
     "lint:types": "tsc --noEmit",
     "playground": "npm dev && npm --filter example-dev dev",
-    "postinstall": "preconstruct dev",
+    "postinstall": "preconstruct build",
     "prepare": "npx simple-git-hooks",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
