@@ -1,29 +1,13 @@
 {
   "name": "root",
   "scripts": {
-    "anvil": "anvil --fork-url $ANVIL_FORK_URL --fork-block-number 15132000",
     "build": "preconstruct build",
-    "changeset:release": "pnpm build && changeset publish",
-    "changeset:version": "changeset version && pnpm install --lockfile-only",
     "dev": "preconstruct dev",
-    "docs:build": "pnpm dev && pnpm --filter docs build",
-    "docs:dev": "pnpm dev && pnpm --filter docs dev",
-    "example:cra": "pnpm build && pnpm --filter example-cra start",
-    "example:next": "pnpm build && pnpm --filter example-next dev",
-    "example:remix": "pnpm build && pnpm --filter example-remix dev",
-    "example:vite-react": "pnpm build && pnpm --filter example-vite-react dev",
+    "docs:build": "npm dev && npm --filter docs build",
+    "docs:dev": "npm dev && npm --filter docs dev",
     "lint": "eslint . --cache",
-    "lint:fix": "pnpm lint --fix",
-    "lint:format": "prettier --write",
-    "lint:types": "tsc --noEmit",
-    "playground": "pnpm dev && pnpm --filter example-dev dev",
-    "postinstall": "preconstruct dev",
-    "prepare": "npx simple-git-hooks",
-    "test": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "test:run": "vitest run",
-    "test:ui": "vitest --ui",
-    "test:update": "vitest --update"
+    "lint:fix": "npm lint --fix",
+    "lint:format": "prettier --write"
   },
   "preconstruct": {
     "packages": [
