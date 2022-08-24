@@ -18,7 +18,6 @@
     "lint:types": "tsc --noEmit",
     "playground": "pnpm dev && pnpm --filter example-dev dev",
     "postinstall": "preconstruct dev",
-    "preinstall": "npx only-allow pnpm",
     "prepare": "npx simple-git-hooks",
     "test": "vitest",
     "test:coverage": "vitest run --coverage",
@@ -65,21 +64,5 @@
     "typescript": "^4.6.4",
     "vite": "^2.9.8",
     "vitest": "^0.18.1"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx}": [
-      "pnpm lint:fix"
-    ],
-    "*.{json,md,mdx,yml}": [
-      "pnpm lint:format"
-    ]
-  },
-  "packageManager": "pnpm@7.5.0",
-  "engines": {
-    "node": ">=16",
-    "pnpm": ">=7"
   }
 }
